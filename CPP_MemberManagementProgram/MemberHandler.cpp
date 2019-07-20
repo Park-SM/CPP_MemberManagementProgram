@@ -13,7 +13,6 @@ void MemberHandler::PrintList() const {
 }
 
 void MemberHandler::AppendMember(Member *NewMember) {
-
 	if (this->HeadMember == NULL) {
 		this->HeadMember = NewMember;
 	} else {
@@ -26,6 +25,7 @@ void MemberHandler::AppendMember(Member *NewMember) {
 }
 
 bool MemberHandler::CreateMember(Member *tempMember) {
+
 
 	Member *NewMember = new Member();
 	if (NewMember->initMember(tempMember->name, tempMember->age, tempMember->phone, tempMember->juso)) {

@@ -45,14 +45,17 @@ void Display::AddMenu() {
 	cout << "::: ADD MENU :::" << endl;
 	cout << "=========================================================" << endl;
 	cout << "Member Name: ";
-	gets_s(this->tempMember->name, NAME_L);
+	cin.getline(this->tempMember->name, NAME_L);
+
 	cout << "Member Age: ";
 	cin >> this->tempMember->age;
-	while (getchar() != '\n'); // flush buf
+	cin.ignore();
+	
 	cout << "Member Phone: ";
-	gets_s(this->tempMember->phone, PHONE_L);
+	cin.getline(this->tempMember->phone, PHONE_L);
+	
 	cout << "Member address: ";
-	gets_s(this->tempMember->juso, JUSO_L);
+	cin.getline(this->tempMember->juso, JUSO_L);
 
 	if (this->memberHandler->CreateMember(this->tempMember))
 		cout << ">> Success!" << endl;
