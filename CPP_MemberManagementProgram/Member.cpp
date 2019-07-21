@@ -1,14 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Member.h"
 
-Member::Member() : age(0) {
+Member::Member() : origin_no(0), age(0) {
 	memset(this->name, 0x00, NAME_L);
 	memset(this->phone, 0x00, PHONE_L);
 	memset(this->juso, 0x00, JUSO_L);
 }
 
-bool Member::initMember(char *uName, short int uAge, char *uPhone, char *uJuso) {
+bool Member::initMember(short int uNo, char *uName, short int uAge, char *uPhone, char *uJuso) {
 	if (strlen(uName) < NAME_L && strlen(uPhone) < PHONE_L && strlen(uJuso) < JUSO_L) {
+		this->origin_no = uNo;
 		strncpy(this->name, uName, strlen(uName));
 		this->age = uAge;
 		strncpy(this->phone, uPhone, strlen(uPhone));
@@ -44,5 +45,6 @@ void Member::setNextMember(Member *uNextMember) {
 }
 
 void Member::PrintInfo() const {
-	cout << "Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
+	//cout << "Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
+	cout << " o.n: " << this->origin_no << " || Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
 }

@@ -9,6 +9,7 @@ using namespace std;
 
 class Member {
 public:
+	short int origin_no;
 	char name[NAME_L];
 	short int age;
 	char phone[PHONE_L];
@@ -17,7 +18,7 @@ public:
 
 public:
 	Member();
-	bool initMember(char *uName, short int uAge, char *uPhone, char *uJuso);
+	bool initMember(short int uNo, char *uName, short int uAge, char *uPhone, char *uJuso);
 	void setName(char *uName);
 	void setAge(short int uAge);
 	void setPhone(char *uPhone);

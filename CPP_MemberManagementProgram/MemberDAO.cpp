@@ -1,21 +1,16 @@
 #include "MemberDAO.h"
 
-MemberDAO::MemberDAO() {
-	if (mysql_init(&this->conn) == NULL) {
-		fprintf(stderr, ">> Connecting init error: %s\n", mysql_error(&this->conn));
-	} else puts(">> Successfully initialized the connecting object.");
-
-	std::cout << ">> Connecting to server's Database..";
-	this->db = mysql_real_connect(&this->conn, DB_HOST, DB_USER, DB_PASS, DB_NAME, 3306, NULL, 0);
-	if (this->db == NULL) {
-		fprintf(stderr, "\n>> Connecting error: %s\n", mysql_error(&this->conn));
-		this->IsConnecting = false;
-	} else {
-		puts("\n>> Successfully connected to the server's database.");
-		this->IsConnecting = true;
+MemberDAO::MemberDAO(const char *db_host, const char *db_user, const char *db_pass, const char *db_name, int db_port) {
+	if ((this->db = mysql_init(NULL)) == NULL) {
+		fprintf(stderr, ">> Connecting init error: %s\n", mysql_error(this->db));
+		_getch();
 	}
 
-	puts("Please press any key to continue.."); _getch();
+	if (mysql_real_connect(this->db, db_host, db_user, db_pass, db_name, db_port, NULL, 0) == NULL) {
+		fprintf(stderr, "\n>> Connecting error: %s\n", mysql_error(this->db));
+		this->IsConnecting = false;
+		_getch();
+	} else this->IsConnecting = true;
 }
 
 void MemberDAO::ConnectingCheck() const {
@@ -25,4 +20,8 @@ void MemberDAO::ConnectingCheck() const {
 	} else puts(">> Error: Failed to check server database version for disconnecting.");
 	
 	puts("Please press any key to continue.."); _getch();
+}
+
+MemberDAO::~MemberDAO() {
+	mysql_close(this->db);
 }

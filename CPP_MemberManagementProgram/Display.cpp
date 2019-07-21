@@ -1,7 +1,6 @@
 #include "Display.h"
 
-Display::Display() {
-	this->escape = 1;
+Display::Display() : escape(1) {
 	this->memberHandler = new MemberHandler();
 	this->tempMember = new Member();
 }
@@ -68,6 +67,7 @@ void Display::AddMenu() {
 }
 
 void Display::ModifyMenu() const {
+	this->memberHandler->LoadDB();
 	short int selectIndex = 0;
 	system("cls");
 	cout << "=========================================================" << endl;
@@ -78,7 +78,7 @@ void Display::ModifyMenu() const {
 	cin >> selectIndex;
 	while (getchar() != '\n'); // flush buf
 
-	if (selectIndex <= memberHandler->getNumOfMember()) {
+	if (selectIndex > 0 && selectIndex <= memberHandler->getNumOfMember()) {
 		cout << "=============================" << endl;
 		cout << "Member Name: ";
 		gets_s(this->tempMember->name, NAME_L);
@@ -102,6 +102,7 @@ void Display::ModifyMenu() const {
 }
 
 void Display::DeleteMenu() {
+	this->memberHandler->LoadDB();
 	short int selectIndex = 0;
 	system("cls");
 	cout << "=========================================================" << endl;
@@ -113,7 +114,7 @@ void Display::DeleteMenu() {
 	while (getchar() != '\n'); // flush buf
 
 
-	if (selectIndex <= memberHandler->getNumOfMember()) {
+	if (selectIndex > 0 && selectIndex <= memberHandler->getNumOfMember()) {
 		if (this->memberHandler->DeleteMember(selectIndex))
 			cout << ">> Success!" << endl;
 		else
