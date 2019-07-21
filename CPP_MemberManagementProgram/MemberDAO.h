@@ -3,7 +3,7 @@
 
 #pragma comment (lib, "libmysql.lib")
 
-#define DB_HOST "125.129.249.230"
+#define DB_HOST "smparkworld.com"
 #define DB_USER
 #define DB_PASS
 #define DB_NAME
@@ -13,13 +13,14 @@
 
 class MemberDAO {	
 private:
-	MYSQL db;
+	MYSQL *db, conn;
 	MYSQL_RES *result;
 	MYSQL_ROW row;
+	bool IsConnecting;
 	int query_status;
 public:
 	MemberDAO();
-	int ConnectingCheck() const;
+	void ConnectingCheck() const;
 };
 
 #endif

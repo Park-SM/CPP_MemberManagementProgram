@@ -1,4 +1,4 @@
 ﻿  Main.cpp
   MemberDAO.cpp
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberdao.cpp(9): error C2059: 구문 오류: ','
   코드를 생성하고 있습니다...
-  CPP_MemberManagementProgram.vcxproj -> C:\Users\Park Sangmin\Desktop\CPP_MemberManagementProgram\Debug\CPP_MemberManagementProgram.exe
