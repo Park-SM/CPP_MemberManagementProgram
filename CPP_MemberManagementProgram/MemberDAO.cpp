@@ -1,16 +1,19 @@
 #include "MemberDAO.h"
 
 MemberDAO::MemberDAO(const char *db_host, const char *db_user, const char *db_pass, const char *db_name, int db_port) {
-	if ((this->db = mysql_init(NULL)) == NULL) {
+	if (!(this->db = mysql_init(NULL))) {
 		fprintf(stderr, ">> Connecting init error: %s\n", mysql_error(this->db));
 		_getch();
 	}
 
-	if (mysql_real_connect(this->db, db_host, db_user, db_pass, db_name, db_port, NULL, 0) == NULL) {
+	if (!mysql_real_connect(this->db, db_host, db_user, db_pass, db_name, db_port, NULL, 0)) {
 		fprintf(stderr, "\n>> Connecting error: %s\n", mysql_error(this->db));
 		this->IsConnecting = false;
 		_getch();
-	} else this->IsConnecting = true;
+	} else {
+		mysql_set_character_set(this->db, "euckr");
+		this->IsConnecting = true;
+	}
 }
 
 void MemberDAO::ConnectingCheck() const {

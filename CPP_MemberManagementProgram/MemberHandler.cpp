@@ -38,7 +38,7 @@ void MemberHandler::PrintList() const {
 	if (this->HeadMember != NULL) {
 		Member *CurrentMember = this->HeadMember;
 		for (int index = 1; CurrentMember != NULL; index++) {
-			cout << ">> "<< index << " || ";
+			cout << ">> No."<< index << " || ";
 			CurrentMember->PrintInfo();
 			CurrentMember = CurrentMember->NextMember;
 		}

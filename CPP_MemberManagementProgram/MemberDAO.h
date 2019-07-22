@@ -5,7 +5,6 @@
 
 #define DB_HOST "localhost"
 #define DB_USER 
-#define DB_PASS 
 #define DB_NAME 
 #define DB_PORT 
 // The field names in the schema are "no"(PRIMARY_KEY => AUTO_INCREMENT), "name", "age", "phone", "juso".

@@ -1,3 +1,21 @@
-﻿  MemberHandler.cpp
+﻿  Display.cpp
+  Main.cpp
+  MemberDAO.cpp
+  MemberHandler.cpp
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(18): error C2059: 구문 오류: ','
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(18): error C2512: 'MemberDAO': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+  c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberdao.h(15): note: 'MemberDAO' 선언을 참조하십시오.
 c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(22): warning C4244: '초기화 중': 'my_ulonglong'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  CPP_MemberManagementProgram.vcxproj -> C:\Users\Park Sangmin\Desktop\CPP_MemberManagementProgram\Debug\CPP_MemberManagementProgram.exe
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(62): error C2059: 구문 오류: ','
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(62): error C2512: 'MemberDAO': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+  c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberdao.h(15): note: 'MemberDAO' 선언을 참조하십시오.
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(80): error C2059: 구문 오류: ','
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(80): error C2512: 'MemberDAO': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+  c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberdao.h(15): note: 'MemberDAO' 선언을 참조하십시오.
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(103): error C2059: 구문 오류: ','
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(103): error C2512: 'MemberDAO': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+  c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberdao.h(15): note: 'MemberDAO' 선언을 참조하십시오.
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(144): error C2059: 구문 오류: ','
+c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberhandler.cpp(144): error C2512: 'MemberDAO': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+  c:\users\park sangmin\desktop\cpp_membermanagementprogram\cpp_membermanagementprogram\memberdao.h(15): note: 'MemberDAO' 선언을 참조하십시오.
+  코드를 생성하고 있습니다...

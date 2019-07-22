@@ -45,6 +45,6 @@ void Member::setNextMember(Member *uNextMember) {
 }
 
 void Member::PrintInfo() const {
-	//cout << "Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
-	cout << " o.n: " << this->origin_no << " || Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
+	cout << "Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
+	//cout << " o.n: " << this->origin_no << " || Name: " << this->name << " || Age: " << this->age << " || Phone: " << this->phone << " || Juso: " << this->juso << endl;
 }
