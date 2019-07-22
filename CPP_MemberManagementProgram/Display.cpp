@@ -29,6 +29,7 @@ void Display::MainMenu() {
 }
 
 void Display::PrintMenu() const {
+	this->memberHandler->LoadDB();
 	system("cls");
 	cout << "=========================================================" << endl;
 	cout << "::: PRINT MENU :::" << endl;
